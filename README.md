@@ -1,6 +1,6 @@
 # Ortnec
 
-There are autotests for searching in google.
+There are autotests for Yandex video.
 
 Instruction for launching in docker:
 1. Install docker and docker compose
