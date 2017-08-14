@@ -1,0 +1,22 @@
+version: '2'
+services:
+  codecept:
+      image: codeception/codeception
+      depends_on:
+        - chrome
+      volumes:
+          - './tests:/project/tests'
+          - './codeception.yml:/project/codeception.yml'
+          - './src:/src'
+          - '/var/www/irm/vendor:/project/vendor'
+  chrome:
+      image: 'selenium/standalone-chrome:3.3.1-cesium'
+      ports:
+          - '5900'
+      dns: 8.8.4.4
+      environment:
+        - no_proxy=localhost
+        - DBUS_SESSION_BUS_ADDRESS=/dev/null
+      volumes:
+          - '/dev/shm:/dev/shm'
+      shm_size: 1g

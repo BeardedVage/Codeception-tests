@@ -1,0 +1,1 @@
+java -Dwebdriver.chrome.driver=/path/to/chromedriver -jar /path/to/selenium-server-standalone-3.3.1.jar

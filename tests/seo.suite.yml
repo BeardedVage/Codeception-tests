@@ -1,0 +1,13 @@
+class_name: SeoTester
+modules:
+    enabled:
+        - \Helper\Seo
+        - Asserts
+        - PhpBrowser
+    config:
+        PhpBrowser:
+            url: 'http://localhost'
+            cookies:
+                cookie-1:
+                    Name: test
+                    Value: seo
