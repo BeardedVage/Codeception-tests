@@ -33,8 +33,12 @@ class seoChangesCest
             try {
                 $tags = get_meta_tags($metaData[0]);
             } catch (Exception $e) {
-                $failures[] = 'Failed to open site "' . $metaData[0] . '". ' . $e->getMessage();
+                $failures[] = 'Failed to open site "' . $metaData[0] . '". ' . $e->getMessage() . "\" \r\n";
                 throw new Exception(implode('', $failures));
+                /*
+                 * comment on line with throwing exception and uncomment next line if we want to continue verification even if host is not available
+                 * continue;
+                */
             }
 
             //try to verify titles
