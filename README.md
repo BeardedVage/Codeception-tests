@@ -1,11 +1,11 @@
-# Ortnec
+# Example of tests (Seo and acceptance)
 
-There are autotests for Yandex video.
+There are autotests for checking seo changes and acceptance tests.
 
 Instruction for launching in docker:
 1. Install docker and docker compose
 2. Open work directory in terminal
-3. Launch the next commands to run tests for Yandex
+3. Launch the next commands to run acceptance tests
    - docker-compose up -d
    - docker-compose run --rm codecept run acceptance --html result_yandex.html
 4. Launch the next commands to run test for SEO
